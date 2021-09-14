@@ -22,8 +22,18 @@ export default function App() {
         <button>Ekle</button>
       </div>
       <div className="liste">
+
         {liste.map(item => (
-          <div className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
+          <div 
+          onClick={() => {
+            setListe(
+              liste.map(el => 
+                el.id === item.id ? {...el, tamamlandi: !el.tamamlandi} :el))
+          }}
+           className={item.tamamlandi ? "yapildi" : ""}
+           >
+             {item.baslik}
+             </div>
         ))};
       </div>
       <button className="temizle">Tamamlananlari Temizle</button>
