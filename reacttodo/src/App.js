@@ -3,10 +3,10 @@ import './App.css';
 
 const INITIAL_STATE = [
   { id: 1,
-  baslik:"alisveris yap",
+  baslik:"Alisveris Yap",
 tamamlandi: false},
 { id: 2,
-baslik:"fatura öde",
+baslik:"Fatura Öde",
 tamamlandi:true}
 ];
 
@@ -23,11 +23,12 @@ export default function App() {
       </div>
       <div className="liste">
         {liste.map(item => (
-          <div className="{item.tamamlandi}"></div>
-        ))}
+          <div className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
+        ))};
       </div>
+      <button className="temizle">Tamamlananlari Temizle</button>
     </div>
   );
-}
+};
 
 
