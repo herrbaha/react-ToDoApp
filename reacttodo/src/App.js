@@ -12,6 +12,8 @@ tamamlandi:true}
 
 
 export default function App() {
+  const [liste, setListe] = useState(INITIAL_STATE);
+  
   return (
     <div className="App">
       hello world
