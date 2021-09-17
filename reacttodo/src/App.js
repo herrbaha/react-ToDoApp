@@ -25,9 +25,7 @@ export default function App() {
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
         <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
-        <button onClick = {() => {addNew(yeniBaslik)
-        setYeniBaslik("");
-        }}>Ekle</button>
+        <button onClick = {() => addNew(yeniBaslik)}> Ekle </button>
       </div>
       <div className="liste">
 
