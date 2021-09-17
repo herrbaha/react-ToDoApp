@@ -20,7 +20,10 @@ console.log("YENI BASLIK", "yenibaslik")
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
         <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
-        <button onClick = {() => setListe([...liste, {id:Date.now(), baslik:yeniBaslik, tamamlandi:false}]) }>Ekle</button>
+        <button onClick = {() => {setListe([...liste, {id:Date.now(), baslik:yeniBaslik, tamamlandi:false}
+        ]);
+        setYeniBaslik("");
+        }}>Ekle</button>
       </div>
       <div className="liste">
 
@@ -35,7 +38,7 @@ console.log("YENI BASLIK", "yenibaslik")
            className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
         ))};
       </div>
-      <button className="temizle">Tamamlananlari Temizle</button>
+      <button onClick={() => setListe(liste.filter(item => !item.tamamamlandi))} className="temizle">Tamamlananlari Temizle</button>
     </div>
   );
 };
