@@ -15,13 +15,17 @@ export default function App() {
   const [liste, setListe] = useState(INITIAL_STATE);
   const [yeniBaslik, setYeniBaslik] = useState("");
 
+  const addNew = title => {
+    setListe([...liste, {id: Date.now(), baslik: title, tamamlandi: false }]);
+    setYeniBaslik("");
+  };
+
   return (
     <div className="App">
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
         <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
-        <button onClick = {() => {setListe([...liste, {id:Date.now(), baslik:yeniBaslik, tamamlandi:false}
-        ]);
+        <button onClick = {() => {addNew(yeniBaslik)
         setYeniBaslik("");
         }}>Ekle</button>
       </div>
