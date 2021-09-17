@@ -27,13 +27,13 @@ export default function App() {
         <button onClick={() => addNew(yeniBaslik)}> Ekle </button>
       </div>
       <div className="liste">
-        {liste.map((item, index) => (
+        {liste.map((item, index) => (  //item ve el??
           <div
             key={index}
             onClick={() => {
               setListe(
                 liste.map((el) =>
-                  el.id === item.id ? { ...el, tamamlandi: !el.tamamlandi } : el
+                  el.id === item.id ? { ...el, tamamlandi: !el.tamamlandi } : el  //!ifadesi ??
                 )
               );
             }}
