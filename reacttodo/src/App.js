@@ -11,7 +11,7 @@ export default function App() {
   const [yeniBaslik, setYeniBaslik] = useState("");
 
   const addNew = (title) => {
-    setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);
+    setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);//id.date.now niye??
     setYeniBaslik("");
   };
 
@@ -21,7 +21,7 @@ export default function App() {
       <div className="ekleme_formu">
         <input
           value={yeniBaslik}
-          onChange={(e) => setYeniBaslik(e.target.value)}
+          onChange={(e) => setYeniBaslik(e.target.value)}//e.target.value tam olarak nedir? inputun valuesuna ersimek icin herhalde ama niye böyle kullaniyliyor?
           placeholder="listeye ekle"
         />
         <button onClick={() => addNew(yeniBaslik)}> Ekle </button>
