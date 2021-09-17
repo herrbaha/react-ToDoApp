@@ -20,7 +20,7 @@ console.log("YENI BASLIK", "yenibaslik")
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
         <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
-        <button>Ekle</button>
+        <button onClick = {() => setListe([...liste, {id:Date.now(), baslik:yeniBaslik, tamamlandi:false}]) }>Ekle</button>
       </div>
       <div className="liste">
 
