@@ -38,7 +38,7 @@ console.log("YENI BASLIK", "yenibaslik")
            className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
         ))};
       </div>
-      <button onClick={() => setListe(liste.filter(item => !item.tamamamlandi))} className="temizle">Tamamlananlari Temizle</button>
+      <button onClick={() => setListe(liste.filter(item => !item.tamamlandi))} className="temizle">Tamamlananlari Temizle</button>
     </div>
   );
 };
