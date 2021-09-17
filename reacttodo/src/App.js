@@ -25,7 +25,7 @@ export default function App() {
       <div className="liste">
 
         {liste.map(item => (
-          <div 
+          <div key={item.index}
           onClick={() => {
             setListe(
               liste.map(el => 
