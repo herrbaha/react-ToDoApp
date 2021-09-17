@@ -1,22 +1,17 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 const INITIAL_STATE = [
-  { id: 1,
-  baslik:"Alisveris Yap",
-tamamlandi: false},
-{ id: 2,
-baslik:"Fatura Öde",
-tamamlandi:true}
+  { id: 1, baslik: "Alisveris Yap", tamamlandi: false },
+  { id: 2, baslik: "Fatura Öde", tamamlandi: true },
 ];
-
 
 export default function App() {
   const [liste, setListe] = useState(INITIAL_STATE);
   const [yeniBaslik, setYeniBaslik] = useState("");
 
-  const addNew = title => {
-    setListe([...liste, {id: Date.now(), baslik: title, tamamlandi: false }]);
+  const addNew = (title) => {
+    setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);
     setYeniBaslik("");
   };
 
@@ -24,25 +19,37 @@ export default function App() {
     <div className="App">
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
-        <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
-        <button onClick = {() => addNew(yeniBaslik)}> Ekle </button>
+        <input
+          value={yeniBaslik}
+          onChange={(e) => setYeniBaslik(e.target.value)}
+          placeholder="listeye ekle"
+        />
+        <button onClick={() => addNew(yeniBaslik)}> Ekle </button>
       </div>
       <div className="liste">
-
         {liste.map((item, index) => (
-          <div 
-          key={index}
-          onClick={() => {
-            setListe(
-              liste.map(el => 
-                el.id === item.id ? {...el, tamamlandi: !el.tamamlandi} :el))
-          }}
-           className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
-        ))};
+          <div
+            key={index}
+            onClick={() => {
+              setListe(
+                liste.map((el) =>
+                  el.id === item.id ? { ...el, tamamlandi: !el.tamamlandi } : el
+                )
+              );
+            }}
+            className={item.tamamlandi ? "yapildi" : ""}
+          >
+            {item.baslik}
+          </div>
+        ))}
+        ;
       </div>
-      <button onClick={() => setListe(liste.filter(item => !item.tamamlandi))} className="temizle">Tamamlananlari Temizle</button>
+      <button
+        onClick={() => setListe(liste.filter((item) => !item.tamamlandi))}
+        className="temizle"
+      >
+        Tamamlananlari Temizle
+      </button>
     </div>
   );
-};
-
-
+}
