@@ -14,7 +14,7 @@ tamamlandi:true}
 export default function App() {
   const [liste, setListe] = useState(INITIAL_STATE);
   const [yeniBaslik, setYeniBaslik] = useState("");
-
+console.log("YENI BASLIK", "yenibaslik")
   return (
     <div className="App">
       <h1>Yapilacaklar Listesi</h1>
@@ -32,10 +32,7 @@ export default function App() {
               liste.map(el => 
                 el.id === item.id ? {...el, tamamlandi: !el.tamamlandi} :el))
           }}
-           className={item.tamamlandi ? "yapildi" : ""}
-           >
-             {item.baslik}
-             </div>
+           className={item.tamamlandi ? "yapildi" : ""}>{item.baslik}</div>
         ))};
       </div>
       <button className="temizle">Tamamlananlari Temizle</button>
