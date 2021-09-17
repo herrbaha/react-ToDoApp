@@ -13,12 +13,13 @@ tamamlandi:true}
 
 export default function App() {
   const [liste, setListe] = useState(INITIAL_STATE);
+  const [yeniBaslik, setYeniBaslik] = useState("");
 
   return (
     <div className="App">
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
-        <input placeholder="listeye ekle" />
+        <input onChange = {(e) => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
         <button>Ekle</button>
       </div>
       <div className="liste">
