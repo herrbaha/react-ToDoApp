@@ -19,13 +19,14 @@ export default function App() {
     <div className="App">
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
-        <input value={yeniBaslik} onChange = {(e) => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
+        <input value={yeniBaslik} onChange = {e => setYeniBaslik(e.target.value)} placeholder="listeye ekle" />
         <button>Ekle</button>
       </div>
       <div className="liste">
 
         {liste.map((item, index) => (
-          <div key={index}
+          <div 
+          key={index}
           onClick={() => {
             setListe(
               liste.map(el => 
