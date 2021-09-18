@@ -29,7 +29,7 @@ export default function App() {
       <div className="liste">
         {liste.map((item, index) => (  //item ve element ayni listenin ayni elemanlari degil mi??
           <div
-            key={index}
+            key={index} //burada item.id de olabilirdi
             onClick={() => {
               setListe(
                 liste.map((el) =>
