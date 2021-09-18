@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 const INITIAL_STATE = [
-  { id: 1, baslik: "Alisveris Yap", tamamlandi: false },
+  { id: 1, baslik: "Alisveris Yap", tamamlandi: true },
   { id: 2, baslik: "Fatura Öde", tamamlandi: true },
 ];
 
