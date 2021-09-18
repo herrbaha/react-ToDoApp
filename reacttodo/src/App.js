@@ -11,7 +11,7 @@ export default function App() {
   const [yeniBaslik, setYeniBaslik] = useState("");
 
   const addNew = (title) => {
-    setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);//id.date.now niye??
+    setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);//id.date.now() niye??
     setYeniBaslik("");
   };
 
