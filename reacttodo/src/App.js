@@ -30,10 +30,10 @@ export default function App() {
         {liste.map((item, index) => (  //item ve element ayni listenin ayni elemanlari degil mi??
           <div
             key={index} //burada item.id de olabilirdi
-            onClick={() => {
+            onClick = {() => {
               setListe(
                 liste.map((el) =>
-                  el.id === item.id ? { ...el, tamamlandi: !el.tamamlandi } : el  //!ifadesi ??
+                  el.id === item.id ? { ...el, tamamlandi: !el.tamamlandi } : el  //!i burasi tam olarak nasil okunmali ??
                 )
               );
             }}
