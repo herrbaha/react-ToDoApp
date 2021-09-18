@@ -20,11 +20,11 @@ export default function App() {
       <h1>Yapilacaklar Listesi</h1>
       <div className="ekleme_formu">
         <input
-          value={yeniBaslik}
-          onChange={(e) => setYeniBaslik(e.target.value)}//e.target.value tam olarak nedir? inputun valuesuna ersimek icin herhalde ama niye böyle kullaniyliyor?
-          placeholder="listeye ekle"
+          value = {yeniBaslik}
+          onChange = {(e) => setYeniBaslik(e.target.value)}//e.target.value tam olarak nedir? inputun valuesuna ersimek icin herhalde ama niye böyle kullaniyliyor?
+          placeholder = "listeye ekle"
         />
-        <button onClick={() => addNew(yeniBaslik)}> Ekle </button>
+        <button onClick = {() => addNew(yeniBaslik)} > Ekle </button>
       </div>
       <div className="liste">
         {liste.map((item, index) => (  //item ve el??
