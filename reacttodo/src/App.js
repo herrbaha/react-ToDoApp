@@ -27,7 +27,7 @@ export default function App() {
         <button onClick = {() => addNew(yeniBaslik)} > Ekle </button>
       </div>
       <div className="liste">
-        {liste.map((item, index) => (  //item ve el??
+        {liste.map((item, index) => (  //item ve element ayni listenin ayni elemanlari degil mi??
           <div
             key={index}
             onClick={() => {
