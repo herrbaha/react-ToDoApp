@@ -12,7 +12,7 @@ export default function App() {
 
   const addNew = (title) => {
     setListe([...liste, { id: Date.now(), baslik: title, tamamlandi: false }]);//id.date.now() niye??  her yeni eklenen element icin ayri bir seye ihtiyacimiz var, bu hepsi icin farkli olmali, o yüzden burada saat kullanilmis bu farkli birsey de olabilirdi.
-    setYeniBaslik(""); 
+    setYeniBaslik(""); // eger bunu koymazsak yazdigimiz seyi kaydet dedigimizde input bosalmaz, inputun her seferinnde temizlenmesi icin bunu yapiyoruz
   };
 
   return (
