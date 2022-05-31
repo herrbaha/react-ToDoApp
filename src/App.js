@@ -33,7 +33,7 @@ export default function App() {
         {liste.map(
           (
             item,
-            index //item ve element ayni listenin ayni elemanlari degil mi??
+            index
           ) => (
             <div
               key={index} //burada item.id de olabilirdi
