@@ -24,7 +24,7 @@ export default function App() {
       <div className="ekleme_formu">
         <input
           value={yeniBaslik}
-          onChange={(e) => setYeniBaslik(e.target.value)} //e.target.value tam olarak nedir? inputun valuesuna ersimek icin herhalde ama niye böyle kullaniyliyor? inputun valuesuna ulasmak icin böyle kzllaniliyor istersek bu valuyu daha önce bir variabel olarak tanimlayip onu da kullanabiliriz
+          onChange={(e) => setYeniBaslik(e.target.value)}
           placeholder="listeye ekle"
         />
         <button onClick={() => addNew(yeniBaslik)}> Ekle </button>
