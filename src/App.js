@@ -7,8 +7,9 @@ const INITIAL_STATE = [
 ];
 
 export default function App() {
-  const [liste, setListe] = useState(INITIAL_STATE);
   const [yeniBaslik, setYeniBaslik] = useState("");
+  const [liste, setListe] = useState(INITIAL_STATE);
+  
 
   const addNew = (title) => {
     setListe([
