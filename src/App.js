@@ -16,7 +16,7 @@ export default function App() {
       ...liste,
       { id: liste.length + 1, baslik: title, tamamlandi: false },
     ]); //id.date.now() veya liste.length+1 niye??  her yeni eklenen element icin ayri bir seye ihtiyacimiz var, bu hepsi icin farkli olmali, o yüzden burada saat kullanilmis bu farkli birsey de olabilirdi.
-    setYeniBaslik(""); // eger bunu koymazsak yazdigimiz seyi kaydet dedigimizde input bosalmaz, inputun her seferinnde temizlenmesi icin bunu yapiyoruz
+    setYeniBaslik(""); 
   };
 
   return (
